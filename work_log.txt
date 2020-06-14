@@ -4,3 +4,6 @@ WORK LOG for IISc Internship
 13th June:
 	#Lean about facial feature extraction using dlib in Python 
 	#Mail ma'am regarding the status and work distribution od our internship
+
+14th June:
+	#Implemented a basic lip mask using dlib 
