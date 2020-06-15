@@ -4,3 +4,12 @@ WORK LOG for IISc Internship
 13th June:
 	#Lean about facial feature extraction using dlib in Python 
 	#Mail ma'am regarding the status and work distribution od our internship
+
+14th June:
+	#Implemented a basic lip mask using dlib 
+
+15th June:
+	#Mailed ma'am regarding status and work distribution
+	#Trying to use an auto-encoder for feature detection
+	#Bugs remaining : Auto encoder isn't giving desired output
+
