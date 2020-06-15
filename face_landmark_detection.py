@@ -2,10 +2,14 @@ import cv2
 import numpy as np 
 import dlib
 
+write_file = open('Thank_You.txt', 'w')
+
 cap = cv2.VideoCapture(0)
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
+
+lip_contour = []
 
 while True:
 	_, frame = cap.read()
@@ -23,7 +27,16 @@ while True:
 			landmarks = predictor(gray, face)
 			x = landmarks.part(lip_marks).x
 			y = landmarks.part(lip_marks).y
-			cv2.circle(frame, (x, y), 6, (255, 0, 0), -1)
+			t = (x,y)
+			lip_contour.append(t)
+			write_file.write(str(x)+','+str(y)+'\n')
+			cv2.circle(frame, (x, y), 4, (255, 0, 0), -1)
+
+		lip_contour = np.array(lip_contour)
+		#lip_contour.reshape((-1,1,2))
+		write_file.write('\n')
+		cv2.polylines(frame,[lip_contour],True,(255,0,0),2)
+		lip_contour = []
 
 	cv2.imshow('Frame', frame)
 
