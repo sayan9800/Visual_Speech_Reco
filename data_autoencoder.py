@@ -34,7 +34,7 @@ class autoencoder(nn.Module):
             nn.Linear(12, 64),
             nn.ReLU(True),
             nn.Linear(64, 128),
-            nn.ReLU(True), nn.Linear(128, 2), nn.Tanh())#nn.Linear(128, 28 * 28), nn.Tanh())
+            nn.ReLU(True), nn.Linear(128, 2))#, nn.Tanh())#nn.Linear(128, 28 * 28), nn.Tanh())
 
     def forward(self, x):
         x = self.encoder(x)
