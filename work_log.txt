@@ -12,4 +12,11 @@ WORK LOG for IISc Internship
 	#Mailed ma'am regarding status and work distribution
 	#Trying to use an auto-encoder for feature detection
 	#Bugs remaining : Auto encoder isn't giving desired output
+	#Added a graphical module to visualize x and y cordinates over a normalized time frame
+
+16th June:
+	#Tried to new method to extract features using fourier transforms
+	#Transforms giving high DC value, uncomment the last part of the code and notice deltas at 0
+	#This implies that the lips movement have very low frequency attached to it
+	#Would be hard for classical algorithms to capture feautures
 
