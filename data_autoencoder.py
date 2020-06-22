@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 
 filename = 'Thank_You.txt'
 
+#Test
+
 train = np.loadtxt(filename, delimiter = ',', dtype = 'float32')
 #Testing the x-axis data
 train_tensor = torch.from_numpy(train[:,0])
