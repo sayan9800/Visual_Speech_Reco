@@ -23,3 +23,5 @@ WORK LOG for IISc Internship
 22nd June:
     #Made The autoencoder into a general compression/ feature extraction code
     #Still deciding if we're gonna use 13 lip points or general lip rectangular cutout
+    #Next Step is to add GPU processing and convert Linear layers into convolutional layers
+
