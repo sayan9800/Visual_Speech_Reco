@@ -21,10 +21,10 @@ while True:
 		y1 = face.top()
 		x2 = face.right()
 		y2 = face.bottom()
-		#cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
 
-		for lip_marks in range(48, 61):
+		for lip_mask in range(49, 61):
 			landmarks = predictor(gray, face)
+<<<<<<< HEAD
 			x = landmarks.part(lip_marks).x
 			y = landmarks.part(lip_marks).y
 			t = (x,y)
@@ -37,10 +37,21 @@ while True:
 		write_file.write('\n')
 		cv2.polylines(frame,[lip_contour],True,(255,0,0),2)
 		lip_contour = []
+=======
+			x = landmarks.part(lip_mask).x
+			y = landmarks.part(lip_mask).y
+			cv2.circle(frame, (x, y), 4, (255, 0, 0), -1)
+
+		for chin_mask in range(5, 12):
+			landmarks = predictor(gray, face)
+			x = landmarks.part(chin_mask).x
+			y = landmarks.part(chin_mask).y
+			cv2.circle(frame, (x, y), 4, (255, 0, 0), -1)
+>>>>>>> 7ea85ce9f4ae214935685c0db83f5d542b8f6180
 
 	cv2.imshow('Frame', frame)
 
 	key = cv2.waitKey(1)
 	if key == 27:
 		break
-
+cv2.destroyAllWindows()

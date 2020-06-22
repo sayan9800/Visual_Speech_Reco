@@ -6,6 +6,7 @@ WORK LOG for IISc Internship
 	#Mail ma'am regarding the status and work distribution od our internship
 
 14th June:
+<<<<<<< HEAD
 	#Implemented a basic lip mask using dlib 
 
 15th June:
@@ -20,3 +21,6 @@ WORK LOG for IISc Internship
 	#This implies that the lips movement have very low frequency attached to it
 	#Would be hard for classical algorithms to capture feautures
 
+=======
+	#Implemented a basic lip mask using dlib 
+>>>>>>> 7ea85ce9f4ae214935685c0db83f5d542b8f6180
