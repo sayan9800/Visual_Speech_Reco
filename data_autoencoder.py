@@ -72,6 +72,12 @@ for epoch in range(num_epochs):
 	print('Epoch [{}/{}], Loss: {:.4f}'.format(epoch+1, num_epochs, loss.item()))
 	loss_data.append(loss.item())
 
+plt.plot(range(num_epochs), loss_data)
+plt.ylabel('MSE LOSS')
+plt.xlabel('epochs')
+plt.grid(True)
+plt.show()
+
 for test in test_dataset:
 	out = model(test)
 	loss = loss_criterion(out, test)
@@ -86,8 +92,4 @@ for test in test_dataset:
 # print('\n')
 # encoded_tensor = model.encoder(train_tensor)
 # print(encoded_tensor, len(encoded_tensor))
-# plt.plot(range(num_epochs), loss_data)
-# plt.ylabel('MSE LOSS')
-# plt.xlabel('epochs')
-# plt.grid(True)
-# plt.show()
+
