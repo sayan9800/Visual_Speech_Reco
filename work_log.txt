@@ -27,3 +27,6 @@ WORK LOG for IISc Internship
 
 24th June:
     #Added GPU processing to the autoencoder
+
+6th April:
+    #Normalized and recentered the data values
